@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Criollo | Catalogo</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="contenedor nav">
+            <a class="logo" href="index.html">Sabor Criollo</a>
+
+            <input class="menu-toggle" type="checkbox" id="menu-toggle-catalogo">
+            <label class="hamburguesa" for="menu-toggle-catalogo">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <div class="menu">
+                <a href="index.html">Inicio</a>
+                <a class="activo" href="catalogo.html">Catalogo</a>
+                <a href="contacto.html">Contactanos</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="contenedor">
+                <p class="etiqueta">Menu de la casa</p>
+                <h1>Catalogo de platos</h1>
+                <p>Elige entre platos criollos, marinos, pastas y opciones ligeras para cualquier momento del dia.</p>
+            </div>
+        </section>
+
+        <section class="catalogo contenedor">
+            <form class="filtros">
+                <h2>Filtros</h2>
+
+                <label for="nombre">Nombre del plato</label>
+                <input id="nombre" type="search" placeholder="Ej. ceviche">
+
+                <label for="categoria">Categoria</label>
+                <select id="categoria">
+                    <option>Todos los platos</option>
+                    <option>Marino</option>
+                    <option>Criollo</option>
+                    <option>Pastas</option>
+                    <option>Ligero</option>
+                </select>
+
+                <label for="precio">Precio maximo</label>
+                <input id="precio" type="range" min="20" max="45" value="35">
+                <p class="rango-texto">Hasta S/ 45.00</p>
+
+                <div class="chips">
+                    <button type="button">Marino</button>
+                    <button type="button">Criollo</button>
+                    <button type="button">Pastas</button>
+                </div>
+            </form>
+
+            <div class="catalogo-lista">
+                <article class="plato-card">
+                    <img src="assets/img/ceviche.webp" alt="Ceviche clasico">
+                    <div class="plato-info">
+                        <span class="categoria">Marino</span>
+                        <h3>Ceviche clasico</h3>
+                        <p>Pescado fresco, limon, cebolla, culantro, choclo y camote.</p>
+                        <span class="precio">S/ 28.00</span>
+                    </div>
+                </article>
+
+                <article class="plato-card">
+                    <img src="assets/img/lomo-saltado.jpg" alt="Lomo saltado">
+                    <div class="plato-info">
+                        <span class="categoria">Criollo</span>
+                        <h3>Lomo saltado</h3>
+                        <p>Carne salteada con tomate, cebolla, papas fritas y arroz.</p>
+                        <span class="precio">S/ 34.00</span>
+                    </div>
+                </article>
+
+                <article class="plato-card">
+                    <img src="assets/img/pasta-al-pesto.jpeg" alt="Pasta al pesto">
+                    <div class="plato-info">
+                        <span class="categoria">Pastas</span>
+                        <h3>Pasta al pesto</h3>
+                        <p>Pasta larga con salsa de albahaca, aceite de oliva y parmesano.</p>
+                        <span class="precio">S/ 26.00</span>
+                    </div>
+                </article>
+
+                <article class="plato-card">
+                    <img src="assets/img/lomo-saltado.jpg" alt="Aji de gallina">
+                    <div class="plato-info">
+                        <span class="categoria">Criollo</span>
+                        <h3>Aji de gallina</h3>
+                        <p>Pollo deshilachado en crema suave de aji amarillo con arroz.</p>
+                        <span class="precio">S/ 30.00</span>
+                    </div>
+                </article>
+
+                <article class="plato-card">
+                    <img src="assets/img/ceviche.webp" alt="Arroz con mariscos">
+                    <div class="plato-info">
+                        <span class="categoria">Marino</span>
+                        <h3>Arroz con mariscos</h3>
+                        <p>Arroz jugoso con mariscos, pimientos, arvejas y salsa de la casa.</p>
+                        <span class="precio">S/ 38.00</span>
+                    </div>
+                </article>
+
+                <article class="plato-card">
+                    <img src="assets/img/pasta-al-pesto.jpeg" alt="Ensalada de la casa">
+                    <div class="plato-info">
+                        <span class="categoria">Ligero</span>
+                        <h3>Ensalada de la casa</h3>
+                        <p>Verduras frescas, queso, palta y vinagreta de limon.</p>
+                        <span class="precio">S/ 24.00</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="contenedor footer-contenido">
+            <p>Sabor Criollo</p>
+            <p>Pedidos y reservas: 987 654 321</p>
+        </div>
+    </footer>
+</body>
+</html>

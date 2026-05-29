@@ -3,55 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sabores de Casa</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Sabor Criollo | Inicio</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-    <header class="hero">
-        <div class="contenedor">
-            <p class="etiqueta">Restaurante</p>
-            <h1>Sabores de Casa</h1>
-            <p class="subtitulo">Explora nuestros platos favoritos preparados con datos e imagenes de ejemplo.</p>
-            <form class="buscador">
-                <input type="text" placeholder="Buscar plato...">
-            </form>
+    <header class="site-header">
+        <div class="contenedor nav">
+            <a class="logo" href="index.html">Sabor Criollo</a>
+
+            <input class="menu-toggle" type="checkbox" id="menu-toggle-index">
+            <label class="hamburguesa" for="menu-toggle-index">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <div class="menu">
+                <a class="activo" href="index.html">Inicio</a>
+                <a href="catalogo.html">Catalogo</a>
+                <a href="contacto.html">Contactanos</a>
+            </div>
         </div>
     </header>
 
-    <main class="contenedor">
-        <section class="seccion-titulo">
-            <h2>Nuestros platos</h2>
-            <p>Haz clic en cualquier plato para ver sus ingredientes.</p>
+    <main>
+        <section class="banner">
+            <div class="contenedor banner-contenido">
+                <p class="etiqueta">Restaurante peruano</p>
+                <h1>Comida fresca con sabor de casa</h1>
+                <p>Disfruta platos criollos, marinos y pastas preparados al momento para almuerzos familiares, reuniones y pedidos de oficina.</p>
+                <div class="acciones">
+                    <a class="btn" href="catalogo.html">Ver catalogo</a>
+                    <a class="btn btn-secundario" href="contacto.html">Contactanos</a>
+                </div>
+            </div>
         </section>
 
-        <section class="platos">
-            <a class="tarjeta" href="detalle-ceviche.html">
-                <img src="/assets/img/ceviche.webp" alt="Ceviche clasico">
-                <div class="tarjeta-contenido">
-                    <h3>Ceviche clasico</h3>
-                    <p>Pescado fresco marinado con limon, cebolla morada y culantro.</p>
-                    <span class="precio">S/ 28.00</span>
-                </div>
-            </a>
+        <section class="seccion contenedor">
+            <div class="seccion-cabecera">
+                <p class="etiqueta">Favoritos</p>
+                <h2>Platos destacados</h2>
+                <p>Sabores populares de la casa, servidos con ingredientes frescos y porciones generosas.</p>
+            </div>
 
-            <a class="tarjeta" href="detalle-lomo.html">
-                <img src="/assets/img/lomo-saltado.jpg" alt="Lomo saltado">
-                <div class="tarjeta-contenido">
-                    <h3>Lomo saltado</h3>
-                    <p>Carne salteada con cebolla, tomate, papas fritas y arroz blanco.</p>
-                    <span class="precio">S/ 34.00</span>
-                </div>
-            </a>
+            <div class="grid-platos">
+                <a class="plato-card" href="detalle-ceviche.html">
+                    <img src="assets/img/ceviche.webp" alt="Ceviche clasico">
+                    <div class="plato-info">
+                        <span class="categoria">Marino</span>
+                        <h3>Ceviche clasico</h3>
+                        <p>Pescado fresco, limon, cebolla morada, culantro, choclo y camote.</p>
+                        <span class="precio">S/ 28.00</span>
+                    </div>
+                </a>
 
-            <a class="tarjeta" href="detalle-pasta.html">
-                <img src="/assets/img/pasta-al-pesto.jpeg" alt="Pasta al pesto">
-                <div class="tarjeta-contenido">
-                    <h3>Pasta al pesto</h3>
-                    <p>Fideos bañados en salsa pesto cremosa con queso parmesano.</p>
-                    <span class="precio">S/ 26.00</span>
+                <a class="plato-card" href="detalle-lomo.html">
+                    <img src="assets/img/lomo-saltado.jpg" alt="Lomo saltado">
+                    <div class="plato-info">
+                        <span class="categoria">Criollo</span>
+                        <h3>Lomo saltado</h3>
+                        <p>Carne salteada con cebolla, tomate, papas fritas y arroz blanco.</p>
+                        <span class="precio">S/ 34.00</span>
+                    </div>
+                </a>
+
+                <a class="plato-card" href="detalle-pasta.html">
+                    <img src="assets/img/pasta-al-pesto.jpeg" alt="Pasta al pesto">
+                    <div class="plato-info">
+                        <span class="categoria">Pastas</span>
+                        <h3>Pasta al pesto</h3>
+                        <p>Fideos con salsa pesto cremosa, albahaca fresca y queso parmesano.</p>
+                        <span class="precio">S/ 26.00</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <section class="descripcion-banda">
+            <div class="contenedor descripcion">
+                <div>
+                    <p class="etiqueta">Nuestra cocina</p>
+                    <h2>Un espacio simple, calido y hecho para comer bien</h2>
                 </div>
-            </a>
+                <p>En Sabor Criollo mezclamos recetas peruanas clasicas con atencion cercana. Trabajamos con insumos del dia, salsas caseras y platos pensados para compartir sin complicaciones.</p>
+            </div>
         </section>
     </main>
+
+    <footer class="footer">
+        <div class="contenedor footer-contenido">
+            <p>Sabor Criollo</p>
+            <p>Av. Larco 123, Miraflores - Lima | reservas@saborcriollo.pe</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,610 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --fondo: #f8f4ee;
+    --papel: #ffffff;
+    --texto: #2f241f;
+    --muted: #62544d;
+    --primario: #9d3f2f;
+    --primario-oscuro: #7c2f24;
+    --verde: #2f6f4e;
+    --suave: #f3e2d5;
+    --borde: #eadfd4;
+    --sombra: 0 14px 30px rgba(47, 36, 31, 0.12);
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+input,
+select,
+button {
+    font: inherit;
+}
+
+.contenedor {
+    width: 1120px;
+    max-width: calc(100% - 40px);
+    margin: 0 auto;
+}
+
+.site-header {
+    border-bottom: 1px solid var(--borde);
+}
+
+.nav {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--primario);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.menu-toggle,
+.hamburguesa {
+    display: none;
+}
+
+.hamburguesa {
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.hamburguesa:hover {
+    border-color: var(--primario);
+    box-shadow: 0 8px 16px rgba(47, 36, 31, 0.12);
+}
+
+.hamburguesa span {
+    width: 20px;
+    height: 2px;
+    background: var(--primario-oscuro);
+    border-radius: 999px;
+}
+
+.menu a {
+    padding: 10px 14px;
+    border-radius: 6px;
+    color: var(--muted);
+    font-weight: 700;
+    transition: 0.2s ease;
+}
+
+.menu a:hover,
+.menu a.activo {
+    background: var(--suave);
+    color: var(--primario-oscuro);
+}
+
+.banner {
+    min-height: 480px;
+    display: flex;
+    align-items: center;
+    background:
+        linear-gradient(rgba(31, 23, 19, 0.62), rgba(31, 23, 19, 0.62)),
+        url("../img/lomo-saltado.jpg") center/cover;
+    color: #fffaf6;
+}
+
+.banner-contenido {
+    padding: 80px 0;
+}
+
+.etiqueta {
+    margin: 0 0 10px;
+    color: var(--verde);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.banner .etiqueta,
+.page-hero .etiqueta,
+.footer .etiqueta {
+    color: #f9cfa8;
+}
+
+.banner h1,
+.page-hero h1 {
+    width: 720px;
+    max-width: 100%;
+    margin: 0 0 16px;
+    font-size: 52px;
+    line-height: 1.05;
+}
+
+.banner p,
+.page-hero p {
+    width: 650px;
+    max-width: 100%;
+    margin: 0 0 24px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.acciones {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 12px 18px;
+    border-radius: 6px;
+    background: var(--primario);
+    color: #ffffff;
+    font-weight: 800;
+    box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+    transition: 0.2s ease;
+}
+
+.btn:hover {
+    background: var(--primario-oscuro);
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    background: #ffffff;
+    color: var(--primario-oscuro);
+}
+
+.btn-secundario:hover {
+    background: var(--suave);
+}
+
+.seccion {
+    padding: 54px 0;
+}
+
+.seccion-cabecera {
+    width: 720px;
+    max-width: 100%;
+    margin-bottom: 26px;
+}
+
+.seccion-cabecera h2,
+.descripcion h2,
+.filtros h2,
+.dato-card h2,
+.ingredientes h2 {
+    margin: 0 0 10px;
+    font-size: 32px;
+}
+
+.seccion-cabecera p,
+.descripcion p,
+.dato-card p,
+.plato-info p,
+.detalle-info p,
+table {
+    line-height: 1.6;
+}
+
+.seccion-cabecera p,
+.plato-info p,
+.dato-card p,
+.descripcion p {
+    color: var(--muted);
+}
+
+.grid-platos,
+.catalogo-lista {
+    display: flex;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+.plato-card {
+    flex: 1 1 280px;
+    min-width: 0;
+    background: var(--papel);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    transition: 0.2s ease;
+}
+
+.plato-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 36px rgba(47, 36, 31, 0.18);
+}
+
+.plato-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.plato-info {
+    padding: 20px;
+}
+
+.plato-info h3 {
+    margin: 8px 0 10px;
+    font-size: 24px;
+}
+
+.categoria,
+.precio {
+    display: inline-flex;
+    align-items: center;
+    min-height: 30px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 14px;
+    font-weight: 800;
+}
+
+.categoria {
+    background: #e3efe7;
+    color: var(--verde);
+}
+
+.precio {
+    background: var(--suave);
+    color: var(--primario-oscuro);
+}
+
+.descripcion-banda {
+    padding: 52px 0;
+    background: #ffffff;
+    border-top: 1px solid var(--borde);
+    border-bottom: 1px solid var(--borde);
+}
+
+.descripcion {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.descripcion > div,
+.descripcion > p {
+    flex: 1;
+}
+
+.page-hero {
+    padding: 74px 0;
+    background:
+        linear-gradient(rgba(31, 23, 19, 0.68), rgba(31, 23, 19, 0.68)),
+        url("../img/ceviche.webp") center/cover;
+    color: #fffaf6;
+}
+
+.contacto-hero {
+    background:
+        linear-gradient(rgba(31, 23, 19, 0.68), rgba(31, 23, 19, 0.68)),
+        url("../img/pasta-al-pesto.jpeg") center/cover;
+}
+
+.catalogo {
+    display: flex;
+    align-items: flex-start;
+    gap: 26px;
+    padding: 44px 0 58px;
+}
+
+.filtros {
+    flex: 0 0 280px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 22px;
+    background: var(--papel);
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+}
+
+.filtros label {
+    font-weight: 800;
+    color: var(--texto);
+}
+
+.filtros input,
+.filtros select,
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--borde);
+    border-radius: 6px;
+    background: #fffdfb;
+    color: var(--texto);
+    outline: none;
+    transition: 0.2s ease;
+}
+
+.filtros input:focus,
+.filtros select:focus,
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primario);
+    box-shadow: 0 0 0 3px rgba(157, 63, 47, 0.12);
+}
+
+.rango-texto {
+    margin: 0 0 8px;
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.chips {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 4px;
+}
+
+.chips button {
+    border: 0;
+    border-radius: 999px;
+    padding: 8px 12px;
+    background: var(--suave);
+    color: var(--primario-oscuro);
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.chips button:hover {
+    background: var(--primario);
+    color: #ffffff;
+}
+
+.catalogo-lista {
+    flex: 1;
+}
+
+.contacto {
+    display: flex;
+    align-items: stretch;
+    gap: 26px;
+    padding: 44px 0 58px;
+}
+
+.contacto-datos {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.dato-card,
+.mapa-card {
+    background: var(--papel);
+    border-radius: 8px;
+    box-shadow: var(--sombra);
+}
+
+.dato-card {
+    padding: 24px;
+}
+
+.dato-card p {
+    margin: 6px 0;
+}
+
+.mapa-card {
+    flex: 1.35;
+    min-height: 420px;
+    overflow: hidden;
+}
+
+.mapa-card iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    border: 0;
+}
+
+.footer {
+    padding: 24px 0;
+    background: #241f1b;
+    color: #fffaf6;
+}
+
+.footer-contenido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.footer p {
+    margin: 0;
+}
+
+.detalle {
+    padding: 34px 0 50px;
+}
+
+.volver {
+    display: inline-block;
+    margin-bottom: 24px;
+    color: var(--primario);
+    font-weight: 800;
+}
+
+.detalle-cabecera {
+    display: flex;
+    gap: 0;
+    margin-bottom: 34px;
+    background: var(--papel);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+}
+
+.detalle-cabecera img {
+    width: 48%;
+    height: 360px;
+    object-fit: cover;
+    transition: 0.2s ease;
+}
+
+.detalle-cabecera img:hover {
+    transform: scale(1.04);
+}
+
+.detalle-info {
+    width: 52%;
+    padding: 34px 30px;
+}
+
+.detalle-info h1 {
+    margin: 0 0 12px;
+    font-size: 44px;
+}
+
+.grande {
+    font-size: 18px;
+}
+
+.ingredientes {
+    background: var(--papel);
+    padding: 28px;
+    border-radius: 8px;
+    box-shadow: 0 14px 30px rgba(47, 36, 31, 0.08);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fffdfb;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--borde);
+}
+
+th {
+    background: var(--suave);
+    color: var(--primario-oscuro);
+}
+
+@media (max-width: 860px) {
+    .descripcion,
+    .catalogo,
+    .contacto,
+    .detalle-cabecera {
+        flex-direction: column;
+    }
+
+    .nav {
+        min-height: 64px;
+        padding: 14px 0;
+        flex-wrap: wrap;
+    }
+
+    .hamburguesa {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .menu {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+        padding-top: 12px;
+    }
+
+    .menu-toggle:checked ~ .menu {
+        display: flex;
+    }
+
+    .banner h1,
+    .page-hero h1 {
+        font-size: 38px;
+    }
+
+    .filtros,
+    .detalle-cabecera img,
+    .detalle-info {
+        width: 100%;
+        flex-basis: auto;
+    }
+
+    .mapa-card {
+        min-height: 340px;
+    }
+
+    .mapa-card iframe {
+        min-height: 340px;
+    }
+}
+
+@media (max-width: 560px) {
+    .contenedor {
+        max-width: calc(100% - 24px);
+    }
+
+    .banner {
+        min-height: 420px;
+    }
+
+    .banner h1,
+    .page-hero h1 {
+        font-size: 32px;
+    }
+
+    .banner p,
+    .page-hero p {
+        font-size: 16px;
+    }
+
+    .menu a {
+        padding: 9px 10px;
+    }
+
+    .plato-card img {
+        height: 190px;
+    }
+}
